@@ -68,6 +68,9 @@ async function checkWeather(city) {
             } else if (data.weather[0].main === "Ash") {
                 weatherIcon.src = "images/ash.png";
                 description = "Volcanic ash in the air.";
+            } else if (data.weather[0].main === "Smoke") {
+                weatherIcon.src = "images/smoke.png";
+                description = "Smoke in the area, visibility may be reduced.";
             } else {
                 weatherIcon.src = "images/default.png"; // Default icon for unhandled weather conditions
                 description = "Weather condition not recognized.";
