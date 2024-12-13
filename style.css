@@ -1,0 +1,228 @@
+* {
+    margin: 0;
+    padding: 0;
+    font-family: 'Quicksand', sans-serif;
+    box-sizing: border-box;
+}
+
+body {
+    background: #222;
+}
+
+.weather__container {
+    width: 90%;
+    max-width: 470px;
+    background: linear-gradient(135deg,#647dee, #7f53ac);
+    color:#FFFFFF;
+    margin: 70px auto 0;
+    border-radius: 20px;
+    padding: 40px 35px;
+    text-align: center;
+}
+
+.search {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.search input {
+    border: 0;
+    outline: 0;
+    background: #ebfffc;
+    color: #555;
+    padding: 10px 25px;
+    height: 60px;
+    border-radius: 30px;
+    flex: 1;
+    margin-right: 16px;
+    font-size: 18px;
+}
+
+.search button {
+    border: 0;
+    outline: 0;
+    background: #ebfffc;
+    width: 60px;
+    height: 60px;
+    cursor: pointer;
+    border-radius: 50%;
+}
+
+.search .search__icon {
+    width: 16px;    
+}
+
+.weather .weather__icon {
+    width: 170px;
+    margin-top: 30px;
+}
+
+.weather h1 {
+    font-size: 80px;
+    font-weight: 500;
+}
+
+.weather h2 {
+    font-size: 45px;
+    font-weight: 400;
+    margin-top: -10px;
+}
+
+.details {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 20px;
+    margin-top: 50px;    
+}
+
+.column {
+    display: flex;
+    align-items: center;
+    text-align: left;   
+}
+
+.column img {
+    width: 40px;
+    margin-right: 10px;
+}
+
+.humidity, .wind {
+    font-size: 28px;
+    margin-top: -6px;
+}
+
+.weather {
+    display: none;
+}
+
+.error {
+    text-align: left;
+    margin-left: 10px;
+    font-size: 14px;
+    margin-top: 10px;
+    display: none;
+}
+
+.weather__description {
+    margin-top: 6px;
+}
+
+/* Styles for screens with a max width of 480px */
+@media screen and (max-width: 480px) {
+    .weather__container {
+        width: 95%; /* Increase width relative to the screen */
+        padding: 30px 20px; /* Reduce padding for better fit */
+        margin: 20px auto; /* Adjust margin */
+        border-radius: 15px;
+    }
+
+    .search {
+        flex-direction: column; /* Stack input and button vertically */
+        align-items: stretch; /* Ensure full width for elements */
+        gap: 10px; /* Add space between input and button */
+    }
+
+    .search input {
+        font-size: 16px; /* Reduce font size */
+        padding: 8px 15px; /* Adjust padding */
+        height: 50px; /* Decrease height */
+        margin-right: 0; /* Remove right margin */
+        border-radius: 25px;
+    }
+
+    .search button {
+        width: 50px; /* Reduce button size */
+        height: 50px;
+    }
+
+    .weather .weather__icon {
+        width: 130px; /* Reduce weather icon size */
+        margin-top: 20px;
+    }
+
+    .weather h1 {
+        font-size: 60px; /* Adjust font size for temperature */
+    }
+
+    .weather h2 {
+        font-size: 30px; /* Reduce font size for city name */
+    }
+
+    .details {
+        flex-direction: column; /* Stack details vertically */
+        align-items: flex-start; /* Align items to the left */
+        padding: 0; /* Remove horizontal padding */
+        margin-top: 30px; /* Reduce top margin */
+        gap: 15px; /* Add space between columns */
+    }
+
+    .column {
+        flex-direction: row; /* Maintain row layout for each detail */
+        align-items: center; /* Center-align content */
+        justify-content: flex-start; /* Align content to the left */
+    }
+
+    .column img {
+        width: 30px; /* Reduce icon size */
+    }
+
+    .humidity, .wind {
+        font-size: 20px; /* Reduce font size for details */
+    }
+
+    .error {
+        font-size: 12px; /* Adjust font size for error messages */
+        margin-top: 8px; /* Adjust top margin */
+    }
+}
+
+/* Styles for very small screens with a max width of 320px */
+@media screen and (max-width: 320px) {
+    .weather__container {
+        padding: 20px 15px; /* Further reduce padding */
+        border-radius: 10px;
+    }
+
+    .search input {
+        font-size: 14px; /* Reduce font size for input */
+        padding: 5px 10px; /* Adjust padding */
+        height: 40px; /* Decrease height */
+    }
+
+    .search button {
+        width: 40px; /* Further reduce button size */
+        height: 40px;
+    }
+
+    .weather .weather__icon {
+        width: 100px; /* Reduce weather icon size */
+    }
+
+    .weather h1 {
+        font-size: 50px; /* Adjust font size for temperature */
+    }
+
+    .weather h2 {
+        font-size: 25px; /* Adjust font size for city name */
+    }
+
+    .details {
+        gap: 10px; /* Add spacing between details */
+    }
+
+    .column img {
+        width: 25px; /* Reduce icon size */
+    }
+
+    .humidity, .wind {
+        font-size: 16px; /* Reduce font size for details */
+    }
+
+    .error {
+        font-size: 10px; /* Smaller font size for error */
+    }
+}
+
